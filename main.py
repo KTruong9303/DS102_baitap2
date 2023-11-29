@@ -1,7 +1,7 @@
 import streamlit as st
 from PIL import Image
 import pickle as pkl
-import numpy
+import numpy as np
 # import sklearn
 
 class_list = {'0' : 'NORMAL', '1' : 'Pneumonia'}
