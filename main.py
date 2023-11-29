@@ -19,7 +19,7 @@ if image is not None:
   st.image(image, caption='test iamge')
 
   if st.button('Predict'):
-    image = image.resize((227*227*3), 1)
+    image = image.resize(((227*227*3), 1))
     feature_vector = np.array(image)
     label = st.write(model.predict(feature_vector))
 
