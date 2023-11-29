@@ -7,8 +7,8 @@ class_list = {'0' : 'NORMAL', '1' : 'Pneumonia'}
 
 st.title('Pneu Detection')
 
-input = open('lrc_xray.pkl', 'rb')
-model = pkl.load(input)
+with open('lrc_xray.pkl', 'rb') as input:
+  model = pkl.load(input)
 
 st.header('up image')
 image = st.file_uploader('choose!', type = (['png', 'jpg', 'jpeg']))
