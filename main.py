@@ -21,8 +21,8 @@ if image is not None:
   if st.button('Predict'):
     image = image.resize(((227*227*3), 1))
     feature_vector = np.array(image)
-    label = st.write(model.predict(feature_vector))
+    label = str(st.write(model.predict(feature_vector)))
 
     st.header('Result')
-    st.text(label)
+    st.text(class_list[label])
     
