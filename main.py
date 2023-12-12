@@ -9,7 +9,7 @@ class_list = {'0' : 'NORMAL', '1' : 'Pneumonia'}
 st.title('Pneumonia Detection')
 
 image_url = 'https://th.bing.com/th/id/R.5cf88f668fe816d63fb3a2464f40072d?rik=pXI1kUljyoblKQ&pid=ImgRaw&r=0'
-st.image(image_url, caption='Do you find hard breathing?')
+st.image(image_url, caption='Do you find it hard breathing?', width = 200)
 
 
 input = open('lrc_xray.pkl', 'rb')
