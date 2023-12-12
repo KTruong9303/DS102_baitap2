@@ -6,17 +6,21 @@ import numpy as np
 
 class_list = {'0' : 'NORMAL', '1' : 'Pneumonia'}
 
-st.title('Pneu Detection')
+st.title('Pneumonia Detection')
+
+image_url = 'https://th.bing.com/th/id/R.5cf88f668fe816d63fb3a2464f40072d?rik=pXI1kUljyoblKQ&pid=ImgRaw&r=0'
+st.image(image_url, caption='Do you find hard breathing?')
+
 
 input = open('lrc_xray.pkl', 'rb')
 model = pkl.load(input)
 
-st.header('up image')
+st.header('Upload your image')
 image = st.file_uploader('choose!', type = (['png', 'jpg', 'jpeg']))
 
 if image is not None:
   image = Image.open(image)
-  st.image(image, caption='test iamge')
+  st.image(image, caption='test image')
 
   if st.button('Predict'):
     image = image.resize((227*227*3, 1))
